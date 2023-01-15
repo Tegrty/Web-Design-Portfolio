@@ -1,0 +1,97 @@
+* {
+    /* Color Variables */
+    --peach: #ed244e;
+    --yellow: #ffce00;
+    --navy: #07293a;
+    --white: #ffffff;
+
+}
+
+body {
+    font-family: montserrat;
+    background-color: var(--peach);
+    width: 100%;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: inline-block;
+}
+
+nav {
+    background-color: var(--peach);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+}
+
+/* TODO: Debug float right */
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin-right: 20px;
+    float: right;
+    
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: var(--yellow);
+}
+
+
+.menu-logo {
+    color: var(--white);
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 80px;
+    font-weight: bold;
+
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 100px 0;
+}
+
+.about {
+    
+    position: relative;
+    margin-left: 50px;
+}
+
+.about h1 {
+    font-size: 54px;
+    color: var(--white);
+}
+
+.about p {
+    font-size: 10px;
+    color: var(--white);
+}
+
+.about::after {
+    content: "";
+    width: 13px;
+    height: 75%;
+    border-radius: 10px;
+    background: linear-gradient(#ffffff, #ffce00);
+    position: absolute;
+    left: -40px;
+    top: 70px;
+}
+
+.logo img {
+    height: 500px;
+}
