@@ -5,93 +5,166 @@
     --navy: #07293a;
     --white: #ffffff;
 
+
 }
+
+html {
+/* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+    font-size: 62.5%;
+  }
 
 body {
     font-family: montserrat;
     background-color: var(--peach);
+}
+
+  main {
+
+  }
+/* Specifies dimensions of navbar container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
     width: 100%;
+    min-height: 25rem;
     padding-left: 8%;
     padding-right: 8%;
     box-sizing: border-box;
     overflow: hidden;
-    display: inline-block;
 }
-
-nav {
-    background-color: var(--peach);
-    height: 80px;
+/* Centers items within navbar */
+.navbar {
     width: 100%;
     display: flex;
     align-items: center;
-    flex: 1;
+}
+/* Design for text logo */
+.menu-logo {
     cursor: pointer;
-}
-
-/* TODO: Debug float right */
-nav ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin-right: 20px;
-    float: right;
-    
-}
-
-nav ul li a {
+    margin: 3rem;
+    font-size: 2.2rem;
+    font-weight: bold;
     color: var(--white);
+}
+/* Moves navigation links to the right */
+nav {
+    flex: 1;
+    text-align: right;
+}
+/* Removes list */
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 3rem;
+}
+/* Font style of menu text */
+nav ul li a {
     text-decoration: none;
-    font-size: 12px;
-    text-transform: uppercase;
+    color: var(--white);
+    font-size: 1.7rem;
 }
 
 nav ul li a:hover {
-    color: var(--yellow);
+    color: var(--yellow)
+}
+/* Category headers (Projects/about/contact) */
+h2 {
+font-size: 5rem;
+color: var(--white);
+margin: 3rem;
+padding-left: 8%;
+}
+/* Contains "about" text and avatar image also */
+.about-container {
+    /* border: 5px solid white; */
+    margin: 3rem;
+    padding-left: 8%;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
 }
 
-
-.menu-logo {
-    color: var(--white);
-    cursor: pointer;
-    font-size: 25px;
-    line-height: 80px;
-    font-weight: bold;
-
-}
-
-.row {
+.about-row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 100px 0;
 }
-
-.about {
+/* Resize image */
+.avatar {
+    width: 500px;
     
-    position: relative;
-    margin-left: 50px;
+    
 }
 
-.about h1 {
-    font-size: 54px;
+.about-row p {
     color: var(--white);
+    font-size: 1.6rem;
 }
 
-.about p {
-    font-size: 10px;
-    color: var(--white);
+.projects-container {
+    margin: 3rem;
+    padding-left: 8%;
+    border-bottom: 2px solid white;
+    justify-content: center;
 }
 
-.about::after {
-    content: "";
-    width: 13px;
-    height: 75%;
-    border-radius: 10px;
-    background: linear-gradient(#ffffff, #ffce00);
-    position: absolute;
-    left: -40px;
-    top: 70px;
+.projects-row {
+
 }
 
-.logo img {
-    height: 500px;
+.large-img {
+
+
 }
+
+.small-card {
+    width: 20%;
+}
+
+.large-card {
+
+    
+}
+/* Contact form styling */
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:white;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid var(--white);
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+  
+}
+
+.feedback-input:focus { border:2px solid var(--yellow); }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background:var(--yellow);
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:var(--navy); }
