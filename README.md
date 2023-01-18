@@ -11,7 +11,7 @@ This repository will serve as the web design portfolio of Mario Repas with the i
 
 ## Deployment
 
-This portfolio web page is deployed at Https://tegrty.github.io/web-design-portfolio
+This portfolio web page is deployed at https://tegrty.github.io/Web-Design-Portfolio/
 
 ## Usage
 
